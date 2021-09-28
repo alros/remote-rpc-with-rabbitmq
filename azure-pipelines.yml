@@ -13,7 +13,6 @@ resources:
   repositories:
   - repository: remote-rpc-with-rabbitmq
     type: github
-    endpoint: MyGitHubServiceConnection
     name: alros/remote-rpc-with-rabbitmq
 steps:
 - checkout: remote-rpc-with-rabbitmq
