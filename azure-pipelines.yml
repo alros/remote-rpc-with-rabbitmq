@@ -8,8 +8,15 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
+  
+resources:
+  repositories:
+  - repository: remote-rpc-with-rabbitmq
+    type: github
+    endpoint: MyGitHubServiceConnection
+    name: alros/remote-rpc-with-rabbitmq
 steps:
+- checkout: remote-rpc-with-rabbitmq
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
